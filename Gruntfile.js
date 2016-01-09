@@ -77,7 +77,10 @@ module.exports = function(grunt) {
 	      }
 	      ,dev: {
 	          src: [
-	            '<%= cfg.appBase %>/js/*.js'
+	            
+	            'vendor/jquery/dist/jquery.min.js'
+	            ,'vendor/threesixty-slider/dist/threesixty.min.js'
+	            ,'<%= cfg.appBase %>/js/*.js'
 	          ]
 	          ,dest: '<%= cfg.appBase %>/<%= cfg.appJs %>'
 	      } 	           
