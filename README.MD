@@ -1,4 +1,4 @@
-#{{Project Name}}#
+#360 View#
 Project description here
 
 ##Installation##

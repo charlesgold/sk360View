@@ -30,13 +30,18 @@ var sixty = {
 			ext: '.JPG', // extention for the assets
 			height: 600,
 			width: 400,
-			navigation: false,
+			navigation: true,
 			responsive: true,
 			zeroPadding: true
+			
 		});
+	}
+	,setProductView: function(){
+
 	}
 };
 
 sixty.settings				= {};
 sixty.settings.ctrlClass	= ".sixty-ctrl";
+sixty.settings.productView  = "";
 sixty.appInit();
