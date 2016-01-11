@@ -7,7 +7,12 @@ var sixty = {
 		var _this = this;
 		$(document).ready(function(){
 			$(_this.settings.ctrlClass).on('click', function(){
-				_this.getProduct($(this));
+
+				var productInfo = _this.getProduct($(this));
+				var productInfo = productInfo.split(',');
+				_this.setProductView();
+				_this.createThreeSixty(productInfo[0],productInfo[1]);
+
 			});			
 		});
 		
@@ -16,7 +21,8 @@ var sixty = {
 		var prefix 	= that.attr('data-threesixty-prefix');
 		var path	= that.attr('data-threesixty-path');
 		console.log(prefix + ' ' + path);
-		this.createThreeSixty(path,prefix);
+		return path+','+prefix;
+		
 	}
 	,createThreeSixty: function(path, prefix){
 		var product360 = $('.product-360').ThreeSixty({
@@ -30,18 +36,20 @@ var sixty = {
 			ext: '.JPG', // extention for the assets
 			height: 600,
 			width: 400,
-			navigation: true,
+			navigation: false,
 			responsive: true,
 			zeroPadding: true
 			
 		});
 	}
 	,setProductView: function(){
-
+		var _this = this;
+		$(_this.settings.productView).html(_this.settings.Html);
 	}
 };
 
 sixty.settings				= {};
 sixty.settings.ctrlClass	= ".sixty-ctrl";
-sixty.settings.productView  = "";
+sixty.settings.Html		= '<div class="threesixty product-360"><div class=spinner><span>0%</span></div><ol class=threesixty_images></ol></div>';
+sixty.settings.productView  = ".prd_big_slider";
 sixty.appInit();

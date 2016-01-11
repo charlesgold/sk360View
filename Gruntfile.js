@@ -71,7 +71,8 @@ module.exports = function(grunt) {
 	      }
 	      ,dist: {
 	          src: [
-	            '<%= cfg.appBase %>/js/*.js'
+	          	'vendor/threesixty-slider/dist/threesixty.min.js'	
+	            ,'<%= cfg.appBase %>/js/*.js'
 	          ]
 	          ,dest: '<%= cfg.distBase %>/<%= cfg.distJs %>'
 	      }

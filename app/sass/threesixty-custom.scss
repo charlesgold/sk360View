@@ -1,0 +1,20 @@
+$sixtyCtrlBorder: 3px;
+$sixtyCtrlColor: #333;
+
+
+.sixty-ctrl {
+	background-image: url(https://cdn.shopify.com/s/files/1/1063/1348/files/360-select.jpg?3382224568927224989);
+	background-size: 168px 97px;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-height: 97px;
+	min-width: 168px;
+	width: 168px;
+	cursor: pointer;
+	border: $sixtyCtrlBorder solid $sixtyCtrlColor;
+}
+
+.product-360 {
+	max-width:504px;
+	max-height: 336px;
+}
