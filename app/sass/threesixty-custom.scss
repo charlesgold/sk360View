@@ -1,4 +1,4 @@
-$sixtyCtrlBorder: 3px;
+$sixtyCtrlBorder: 0px;
 $sixtyCtrlColor: #333;
 
 
@@ -7,8 +7,8 @@ $sixtyCtrlColor: #333;
 	background-size: 168px 97px;
 	background-repeat: no-repeat;
 	background-position: center;
-	min-height: 97px;
-	min-width: 168px;
+	min-height: 107px;
+	min-width: 160px;
 	width: 168px;
 	cursor: pointer;
 	border: $sixtyCtrlBorder solid $sixtyCtrlColor;

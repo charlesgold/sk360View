@@ -22,6 +22,7 @@
       width: 100%;
     }
   }
+  /*
   .spinner {
     width: 60px;
     display: block;
@@ -42,6 +43,44 @@
       display: block;
     }
   }
+*/
+.underlay {
+  min-height:  340px;
+  height: auto;
+}
+.underlay-on {
+  //background: url(img/M4_Viper_Assault_Rifle-Small-Black_Ops_USA-progress.gif) no-repeat !important;
+  background-position: center;
+  
+  background-size: 500px 340px;
+  
+  min-height: 340px;
+  height: auto; 
+}
+
+.spinner {
+    width: auto !important;
+    max-height: 340px !important;
+    border-radius: 0 !important;
+    margin: 0 auto;
+    padding-top: 25%;
+  span {
+     background: #303030;
+      opacity:0.8;
+      border-radius: 5px;
+      color:#FFF;
+      display: block;
+      width: 25%;
+      margin: 0 auto;
+      padding:5px;
+      text-align: center;
+  }
+
+
+}
+
+
+
   .nav_bar {
     position: absolute;
     top: 10px;

@@ -15,6 +15,9 @@ app/*.js
 app/*.css
 app/*.map
 app/assets
+app/img
+!app/img/360-select.jpg
+!app/img/gun.jpg
 
 ### Distribution directory ###
 dist

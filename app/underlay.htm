@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>360 demo</title>
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="app-1.0.0-20160118-321.css">	
+	
+</head>
+<body>
+<style>
+.spinner-underlay {
+	min-height: 340px;
+	width: auto;
+}
+	.spinner {
+		width: auto !important;
+		
+		border-radius: 0 !important;
+		margin: 0 auto;
+		padding-top: 25%;
+	}
+	.spinner span {
+		 background: #303030;
+    	opacity:0.8;
+    	border-radius: 5px;
+    	color:#FFF;
+    	display: block;
+    	width: 25%;
+    	margin: 0 auto;
+    	padding:5px;
+    	text-align: center;
+	}
+	.underlay {
+		min-height:  340px;
+		height: auto;
+	}
+	.underlay-on{
+		background: url(img/M4_Viper_Assault_Rifle-Small-Black_Ops_USA-progress.gif) no-repeat !important;
+		background-position: center;
+		
+		background-size: 500px 340px;
+		
+		min-height: 340px;
+		height: auto;
+	}
+</style>
+<h1>App</h1>
+<img src="img/M4_Viper_Assault_Rifle-Small-Black_Ops_USA-progress.gif" style="display:none;"/>
+
+<div class="prd_big_slider">
+
+	<div class="threesixty product-360" style="max-width:568px;">
+		<div class="underlay underlay-on">
+		    <div class="spinner">
+		        <span>0%</span>
+		     
+		    </div>
+		</div>
+	    <ol class="threesixty_images"></ol>
+	</div>
+
+
+</div>
+
+
+</body>
+</html>
