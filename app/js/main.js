@@ -58,8 +58,12 @@ var sixty = {
 			onReady: function(){
 				_this.hideUnderlay();
 			}
+
+			,plugins: ['ThreeSixtyFullscreen']
 			
 		});
+
+		product360.play();
 	}
 	,setProductView: function(){
 		var _this = this;
@@ -82,7 +86,9 @@ var sixty = {
 		var proto = 'http://';
 		imgArr = imgList.split(',');
 	  for (var i = 0; i < imgArr.length; i++) {
-	    $("<img />").attr("src", proto + imgArr[i]);
+	    //$("<img />").attr("src", proto + imgArr[i]);
+	    $(new Image()).attr('src', proto + imgArr[i]).appendTo($('#360-preloader')).fadeIn();
+
 	  }
 	}
 	,makeImgArray: function(path,prefix,frames){
@@ -111,5 +117,10 @@ sixty.settings.Html			= '<div class="threesixty product-360"><div id="progress-u
 sixty.settings.productView  = ".prd_big_slider";
 sixty.settings.progressId 	=	"progress-underlay";
 sixty.settings.preloadImages= 1;
-sixty.appInit();
+sixty.settings.fullScreen	= true;
+
+$(window).bind("load", function() {
+   sixty.appInit();
+});
+
 

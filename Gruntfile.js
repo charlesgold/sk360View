@@ -71,7 +71,8 @@ module.exports = function(grunt) {
 	      }
 	      ,dist: {
 	          src: [
-	          	'vendor/threesixty-slider/dist/threesixty.min.js'	
+	          	'vendor/threesixty-slider/src/threesixty.js'
+	            ,'vendor/threesixty-slider/src/plugins/fullscreen.js'	 
 	            ,'<%= cfg.appBase %>/js/*.js'
 	          ]
 	          ,dest: '<%= cfg.distBase %>/<%= cfg.distJs %>'
@@ -79,8 +80,9 @@ module.exports = function(grunt) {
 	      ,dev: {
 	          src: [
 	            
-	            'vendor/jquery/dist/jquery.min.js'
-	            ,'vendor/threesixty-slider/src/threesixty.js'	            
+	            'vendor/jquery/jquery.min.js'
+	            ,'vendor/threesixty-slider/src/threesixty.js'
+	            ,'vendor/threesixty-slider/src/plugins/fullscreen.js'	            
 	            ,'<%= cfg.appBase %>/js/*.js'
 	          ]
 	          ,dest: '<%= cfg.appBase %>/<%= cfg.appJs %>'

@@ -6,7 +6,7 @@ node_modules
 
 ###bower components###
 bower_components
-vendor
+#vendor
 .sass-cache
 
 ### Temp Development ###
