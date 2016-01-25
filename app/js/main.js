@@ -24,7 +24,9 @@ var sixty = {
 				_this.showUnderlay();
 				_this.createThreeSixty(productInfo[0],productInfo[1],productInfo[2]);
 				
-			});			
+			});		
+
+
 		});
 		
 	}
@@ -57,13 +59,20 @@ var sixty = {
 			zeroPadding: true,
 			onReady: function(){
 				_this.hideUnderlay();
+			$('ol.threesixty_images img').on('mousedown',function(){
+				_this.app.product360.stop();
+				
+			});				
+
 			}
 
 			,plugins: ['ThreeSixtyFullscreen']
 			
 		});
-
+		_this.app.product360 = product360;
 		product360.play();
+		
+
 	}
 	,setProductView: function(){
 		var _this = this;
@@ -105,7 +114,7 @@ var sixty = {
 				imgList = imgList.replace(/\,$/, '');
 			}
 		}
-		console.log(imgList);
+		//console.log(imgList);
 		return imgList;
 	}
 
