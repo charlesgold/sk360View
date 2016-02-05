@@ -1,0 +1,165 @@
+$macbook: 1280px;
+$desktop: 1024px;
+$tablet: 768px;
+$mobileLg: 414px; //iphone 6 plus
+$mobileMd: 375px;
+$mobileS4: 360px;
+$mobile: 320px;
+
+$heroGutter: 40px; //total sides
+
+$bopBlue: #0c416d;
+$bopOrange:	#efac07;
+$bopGray:	#e5e5e5;
+$bopDarkGray: #888;
+
+
+// 
+// basic responsive mixin
+//
+@mixin media($size) {
+  @media only screen and (max-device-width: $size){
+  	@content;
+  }
+}
+@mixin mediaLand($size){
+	@media only screen and (max-device-width: $size) and (orientation: landscape){
+		@content;
+	}
+}
+@mixin mobileLand(){
+		display: block;
+		position: fixed;
+		width:100%;
+		top: 0;
+		left: 0;
+		//right: 0;
+		bottom: 0;
+		min-height: 100%;
+		background-color: #FFF;
+		opacity: 1;
+		z-index: 999998;
+
+		.mobile-clearfix {
+			clear:both;
+			
+		}
+		.close-container {
+			padding:5px;
+			position: absolute;
+			display: block;
+			z-index: 9999;
+			margin-right: 5px;
+			padding: 5px;
+			min-height: 20px;			
+		}
+		.mobile-close {
+			color: $bopOrange;
+			padding:5px 10px;
+			border: 2px solid $bopDarkGray;
+			font-size: 1.1em;
+
+
+		}		
+
+		.mobile-container {
+			padding: 0px;
+
+			height: auto;
+			min-height: 100%;
+			max-width: 736px;
+			width:80%;
+			margin: 0 auto;
+
+			.mobile-threesixty-images {
+
+				li {
+					margin-left: -20px;
+					img {
+						top: 1% !important;
+						max-width: 90%;
+					}
+				}
+			}
+		}	
+}
+
+.mobile-threesixty {
+		display: none;
+		min-height: 100%;
+}
+.mobile-curtain {
+	display: none;
+}
+
+.mobile-on {
+	display: block;
+
+	@include media(450px){
+
+		display: block;
+		position: fixed;
+		//overflow: hidden;
+		width:100%;
+		max-width: 450px;
+		top: 20;
+		left: 0;
+		//right: 0;
+		bottom: 0;
+		min-height: 100%;
+		background-color: #FFF;
+		opacity: 1;
+		z-index: 999998;
+
+		.mobile-clearfix {
+			clear:both;
+			
+		}
+		.close-container {
+			padding:5px;
+			position: absolute;
+			display: block;
+			z-index: 9999;
+			margin-right: 5px;
+			padding: 5px;
+			min-height: 20px;			
+		}
+		.mobile-close {
+			color: $bopOrange;
+			padding:5px 10px;
+			border: 2px solid $bopDarkGray;
+			font-size: 1.1em;
+
+
+		}		
+
+		.mobile-container {
+			padding: 0px;
+
+			height: auto;
+			min-height: 100%;
+			max-width: 400px;
+			width:80%;
+			margin: 0 auto;
+
+			.mobile-threesixty-images {
+
+				li {
+					margin-left: -20px;
+					img {
+						top: 25% !important;
+						max-width: 90%;
+					}
+				}
+			}
+		}
+
+	}
+	@include mediaLand(736px){
+		
+		@include mobileLand();
+		max-width: 736px;
+	}
+
+
+}
